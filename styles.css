@@ -1,0 +1,26 @@
+fieldset{
+  width: 80%;
+}
+
+.dropdown-item:hover {
+  background-color: #cceeb0 !important; /* cor personalizada */
+  color: #fff !important; /* cor do texto */
+}
+
+.card-itens{
+  background-color: #6bae6d; /* cor de fundo */
+  color: #FAFAFA;
+}
+
+body {
+  background-color: #FAFAFA;
+  font-family: Arial, sans-serif; /* fonte padrão */
+}
+
+header {
+  background-color: #4CAF50;
+}
+
+.fundo-laranja {
+  background-color: #FF9800; /* cor de fundo */
+}
