@@ -3,18 +3,18 @@ fieldset{
 }
 
 .dropdown-item:hover {
-  background-color: #cceeb0 !important; /* cor personalizada */
-  color: #fff !important; /* cor do texto */
+  background-color: #cceeb0 !important; 
+  color: #fff !important; 
 }
 
 .card-itens{
-  background-color: #6bae6d; /* cor de fundo */
+  background-color: #6bae6d; 
   color: #FAFAFA;
 }
 
 body {
   background-color: #FAFAFA;
-  font-family: Arial, sans-serif; /* fonte padrão */
+  font-family: Arial, sans-serif; 
 }
 
 header {
@@ -22,5 +22,9 @@ header {
 }
 
 .fundo-laranja {
-  background-color: #FF9800; /* cor de fundo */
+  background-color: #FF9800; 
+}
+
+.btn:hover {
+  background-color: #6bae6d;
 }
