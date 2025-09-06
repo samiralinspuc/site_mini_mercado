@@ -1,73 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
-  <!-- Título da Página -->
-  <head>
-    <title>Mini Mercado São João</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-  </head>
+<head>
+  <title>Mini Mercado São João</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-  <!-- Corpo -->
-  <body>
+<body>
+  <!-- Cabeçalho -->
+  <div id="header"></div>
 
-    <!-- Cabeçalho -->
-    <div id="header"></div>
+  <section class="container-fluid text-white p-3">
+    <h1 class="text-center rounded-2 fundo-laranja fw-bold">Serviços</h1>
+  </section>
 
-    <section class="container-fluid text-white p-3">
-      <h1 class="text-center rounded-2 fundo-laranja fw-bold">Serviços</h1>
-    </section>    
+  <main class="card card-itens m-3 px-5 pb-3 pt-3 text-center" id="produtos">
 
-    
-    <main class="card card-itens m-3 px-5 pb-3 pt-3 text-center" id="produtos">
+    <section class="pb-3">
+      <h3 class="text-center">
+        No Mini Mercado São João, você escolhe a forma mais prática de fazer suas compras: </br>
+        receba em casa com nossa Tele Entrega ou retire pessoalmente no balcão, com agilidade e rapidez.
+      </h3>
+    </section>
 
-      <section class="pb-3">
-        <h3 class="text-center">
-          No Mini Mercado São João, você escolhe a forma mais prática de fazer suas compras: </br> 
-          receba em casa com nossa Tele Entrega ou retire pessoalmente no balcão, com agilidade e rapidez.
-        </h3>
-      </section>
-
-      <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title p-3">Retirada no Local</h3>
-              <img src="imagens/servicos/caixa.jpg" class="card-img" alt="...">
-              <h5 class="card-text mt-3 mb-3">Prefere retirar pessoalmente? Faça seu pedido antecipado e retire direto no balcão, sem filas.</h5>
-              <button href="#" class="btn fundo-laranja text-white">Ver Localização</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title p-3">Tele Entrega</h3>
-              <img src="imagens/servicos/caminhao.jpeg" class="card-img" alt="...">
-              <h5 class="card-text mt-3 mb-3">Receba suas compras no conforto da sua casa. Faça seu pedido pelo WhatsApp e entregamos rapidinho até você.</h5>
-              <button href="#" class="btn fundo-laranja text-white">Peça Agora</button>
-            </div>
+    <div class="row">
+      <!-- Retirada -->
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title p-3">Retirada no Local</h3>
+            <img src="imagens/servicos/caixa.jpg" class="card-img" alt="...">
+            <h5 class="card-text mt-3 mb-3">
+              Prefere retirar pessoalmente? Faça seu pedido antecipado e retire direto no balcão, sem filas.
+            </h5>
+            <button class="btn fundo-laranja text-white" data-bs-toggle="modal" data-bs-target="#modalRetirada">
+              Agendar Retirada
+            </button>
           </div>
         </div>
       </div>
 
-      <section class="pt-3">
-        <h3 class="text-center">
-          Escolha a forma mais prática para você e aproveite nossas ofertas todos os dias!
-        </h3>
-      </section>
-    </main>      
+      <!-- Tele Entrega -->
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title p-3">Tele Entrega</h3>
+            <img src="imagens/servicos/caminhao.jpeg" class="card-img" alt="...">
+            <h5 class="card-text mt-3 mb-3">
+              Receba suas compras no conforto da sua casa. Faça seu pedido pelo WhatsApp e entregamos rapidinho até você.
+            </h5>
+            <button class="btn fundo-laranja text-white" data-bs-toggle="modal" data-bs-target="#modalEntrega">
+              Agendar Entrega
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <section class="pt-3">
+      <h3 class="text-center">
+        Escolha a forma mais prática para você e aproveite nossas ofertas todos os dias!
+      </h3>
+    </section>
+  </main>
 
-    <!-- Rodapé -->
-    <div id="footer"></div>  
+  <!-- Modal Retirada -->
+  <div class="modal fade" id="modalRetirada" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="formRetirada">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title">Agendar Retirada</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="dataRetirada" class="form-label">Data</label>
+              <input type="date" class="form-control" id="dataRetirada" required>
+            </div>
+            <div class="mb-3">
+              <label for="horaRetirada" class="form-label">Horário</label>
+              <input type="time" class="form-control" id="horaRetirada" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn fundo-laranja text-white">Confirmar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="assets/main.js"></script> 
+  <!-- Modal Entrega -->
+  <div class="modal fade" id="modalEntrega" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="formEntrega">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title">Agendar Entrega</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="enderecoEntrega" class="form-label">Endereço</label>
+              <textarea class="form-control" id="enderecoEntrega" rows="2" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="dataEntrega" class="form-label">Data</label>
+              <input type="date" class="form-control" id="dataEntrega" required>
+            </div>
+            <div class="mb-3">
+              <label for="horaEntrega" class="form-label">Horário</label>
+              <input type="time" class="form-control" id="horaEntrega" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn fundo-laranja text-white">Confirmar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
-  </body>
+  <!-- Rodapé -->
+  <div id="footer"></div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="assets/main.js"></script>
+  <script>
+    // Form Retirada
+    document.getElementById("formRetirada").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = document.getElementById("dataRetirada").value;
+      const hora = document.getElementById("horaRetirada").value;
+      alert(`✅ Retirada agendada!\nData: ${data}\nHora: ${hora}`);
+      this.reset();
+      bootstrap.Modal.getInstance(document.getElementById('modalRetirada')).hide();
+    });
+
+    // Form Entrega
+    document.getElementById("formEntrega").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const endereco = document.getElementById("enderecoEntrega").value;
+      const data = document.getElementById("dataEntrega").value;
+      const hora = document.getElementById("horaEntrega").value;
+      alert(`✅ Entrega agendada!\nEndereço: ${endereco}\nData: ${data}\nHora: ${hora}`);
+      this.reset();
+      bootstrap.Modal.getInstance(document.getElementById('modalEntrega')).hide();
+    });
+  </script>
+</body>
 
 </html>

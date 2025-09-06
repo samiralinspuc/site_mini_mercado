@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Mini Mercado São João</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body class="bg-light">
+
+    <!-- Cabeçalho -->
+    <div id="header"></div>
+
+    <section class="container-fluid text-white p-3">
+      <h1 class="text-center rounded-2 fundo-laranja fw-bold">Cadastro de Usuário</h1>
+    </section>       
+
+    <main class="card card-itens m-3 px-5 pb-3 pt-3" id="produtos">
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+      <div class="card shadow-lg rounded-4" style="max-width: 500px; width: 100%;">
+          <div class="card-body p-4">
+            <form id="formCadastro">
+              
+              <!-- Nome -->
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome completo</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+              </div>
+  
+              <!-- Endereço -->
+              <div class="mb-3">
+                <label for="endereco" class="form-label">Endereço</label>
+                <textarea class="form-control" id="endereco" rows="2" placeholder="Rua, nº, bairro..." required></textarea>
+              </div>
+  
+              <!-- CPF -->
+              <div class="mb-3">
+                <label for="cpf" class="form-label">CPF</label>
+                <div class="input-group">
+                  <span class="input-group-text">🪪</span>
+                  <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
+                </div>
+              </div>
+  
+              <!-- Sexo -->
+              <div class="mb-3">
+                <label class="form-label d-block">Sexo</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sexo" id="masculino" value="Masculino" required>
+                  <label class="form-check-label" for="masculino">Masculino</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sexo" id="feminino" value="Feminino">
+                  <label class="form-check-label" for="feminino">Feminino</label>
+                </div>
+              </div>
+  
+              <!-- Telefone -->
+              <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="telefone" placeholder="(99) 99999-9999" maxlength="15" required>
+              </div>
+  
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" required>
+              </div>
+
+              <!-- Termos de Serviço e Política de Privacidade -->
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="checkDefault" required>
+                <label class="form-check-label" for="checkDefault">
+                  Estou de acordo com os <a href="#" class="text-decoration-none">Termos de Serviço</a> e a <a href="#" class="text-decoration-none">Política de Privacidade</a>.
+                </label>
+              </div>
+                
+              <!-- Botões -->
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success">Cadastrar</button>
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+              </div>
+  
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>    
+
+    <!-- Rodapé -->
+    <div id="footer"></div>  
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="assets/main.js"></script>
+
+    <!-- Script de Máscaras + Validação -->
+   <script>
+      // Máscara CPF
+      document.getElementById("cpf").addEventListener("input", function(e) {
+        let value = e.target.value.replace(/\D/g, ""); // remove tudo que não for número
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+        e.target.value = value;
+      });
+
+      // Máscara Telefone
+      document.getElementById("telefone").addEventListener("input", function(e) {
+        let value = e.target.value.replace(/\D/g, ""); // somente números
+
+        if (value.length > 11) value = value.slice(0, 11); // limita a 11 dígitos
+
+        if (value.length <= 10) {
+          value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
+        } else {
+          value = value.replace(/(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
+        }
+
+        e.target.value = value;
+      });
+
+      // Simulação de envio
+      document.getElementById("formCadastro").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("✅ Cadastro realizado com sucesso!");
+        this.reset();
+      });
+
+    </script>    
+  </body>
+</html>

@@ -15,9 +15,47 @@
 
     <!-- Cabeçalho -->
     <div id="header"></div>
-
-    <!-- Imagem de Capa -->
-    <img src="imagens/capa.jpg" class="img-fluid" alt="Capa do Mini Mercado São João">
+    
+    <!-- Carrossel -->
+    <div id="carouselPagInicial" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselPagInicial" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselPagInicial" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselPagInicial" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <!-- Primeiro Slide -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imagens/capa.jpg" class="d-block w-100" alt="Imagem de capa do Mini Mercado São João">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <!-- Segundo Slide -->
+        <div class="carousel-item">
+          <img src="imagens/carrossel/bananas.jpg" class="d-block w-100" alt="Imagem de bananas">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Frutas Fresquinhas</h1>
+            <p>Você só encontra aqui!</p>
+          </div>
+        </div>
+        <!-- Terceiro Slide -->
+        <div class="carousel-item">
+          <img src="imagens/carrossel/cenouras.jpg" class="d-block w-100" alt="Imagem de cenouras">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Legumes Selecionados</h1>
+            <p>O melhor para sua casa!</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselPagInicial" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselPagInicial" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>     
 
     <section class="container-fluid text-white p-3">
       <h1 class="text-center rounded-2 fundo-laranja fw-bold">Bem-vindo ao Nosso Mercado</h1>
