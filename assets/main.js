@@ -11,6 +11,18 @@ function loadHTML(id, file) {
     .catch(err => console.error(err));
 }
 
+function aumentarFonte() {
+  document.body.style.fontSize = "larger";
+}
+
+function diminuirFonte() {
+  document.body.style.fontSize = "smaller";
+}
+
+function toggleContraste() {
+  document.body.classList.toggle("alto-contraste");
+}
+
 // Inserir header e footer
 loadHTML("header", "includes/header.html");
 loadHTML("footer", "includes/footer.html");

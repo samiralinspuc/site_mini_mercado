@@ -28,3 +28,12 @@ header {
 .btn:hover {
   background-color: #6bae6d;
 }
+
+.alto-contraste {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.alto-contraste img {
+  filter: grayscale(100%) contrast(200%);
+}

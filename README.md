@@ -10,7 +10,7 @@
   * Logo, paleta de cores e fontes padronizadas.
 
 * Página Inicial
-  * Destaque dos principais produtos e serviços oferecidos.
+  * Destaque dos principais produtos, serviços oferecidos e carrosel animado com imagens de produtos.
 
 * Página Sobre
   * Breve história do Mini Mercado.
@@ -25,7 +25,11 @@
 
 * Página de Serviços
   * Material descritivo sobre os serviços oferecidos.
+  * Adicionado botões para agendamento de retirada e entrega. O agendamento de retirada abre um modal com calendário e seleção de horário, enquanto o agendamento de entrega abre um modal com calendário, horário e campo para endereço.
 
 * Página de Contato
   * Informações para contato via telefone e e-mail.
   * Mapa interativo exibindo a localização fictícia do estabelecimento.
+
+* Acessibilidade
+  * O site agora conta com recursos de acessibilidade: botões para aumentar ou diminuir o tamanho da fonte, opção de alto contraste e textos alternativos descritivos para leitores de tela, facilitando a navegação de pessoas com deficiência visual.
